@@ -1,18 +1,19 @@
 katz_deli = []
+counter = 0 
 
 def line(deli)
   if deli.empty?
     line_str = "The line is currently empty."
   else
-    line_str = "The line is currently:"
-    deli.each_with_index { |person, index| line_str += " #{index + 1}. #{person}" }
+    line_str = "The line is currently: #{deli.length} customers long"
   end
   puts line_str
 end 
 
-def take_a_number(deli, name)
-  deli.push(name)
-  puts "Welcome, #{name}. You are number #{deli.length} in line."
+def take_a_number
+  counter += 1 
+  puts counter
+  
 end 
 
 def now_serving(deli)
